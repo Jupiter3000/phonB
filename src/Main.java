@@ -4,6 +4,8 @@ import java.util.Scanner;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     static Scanner scanner = new Scanner(System.in);
+    static String[][] contacts=new String[100][3];
+    static int size=0;
 
     public static void main(String[] args) {
         showMenue();
@@ -24,7 +26,7 @@ public class Main {
         }
         while (item > 5 || item < 1);
         switch (item) {
-            case 1 -> System.out.println("List");
+            case 1 ->showList();
             case 2 -> System.out.println("Add");
             case 3 -> System.out.println("Delete");
             case 4 -> System.out.println("Update");
@@ -33,6 +35,16 @@ public class Main {
 
         }
 
+
+    }
+    public static void showList(){
+        System.out.println("***List***");
+        for (int i = 0; i < size; i++) {
+            System.out.println("Name: " + contacts[i][0]);
+            System.out.println("Phon number: " + contacts[i][1]);
+            System.out.println("Address: " + contacts[i][2]);
+            System.out.println("------------------------");
+        }
 
     }
 }
