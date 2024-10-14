@@ -150,4 +150,8 @@ public class Main {
         contacts[index][2] = scanner.nextLine();
         System.out.println("update phonenumber successfully");
     }
+    public static void search2() {
+        System.out.println("***Search2***");
+
+    }
 }
